@@ -1,4 +1,4 @@
-Its simple python
+#Its simple python
 
 run the scripts by typing
 
