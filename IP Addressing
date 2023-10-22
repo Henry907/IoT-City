@@ -1,0 +1,7 @@
+IP Addresses:
+Router/Gateway - 192.168.2.1
+Water Tower - 192.168.2.8 (Static)
+Billboard - 192.168.2.6 (Static)
+Traffic Light - 192.168.2.7 (Static)
+Street Lights - 192.168.2.10
+Camera - 192.168.2.15
