@@ -1,0 +1,11 @@
+--2023-10-22 08:28:49--  https://media.discordapp.net/attachments/1003400832735268914/1165413771049697380/logo.png?ex=6546c327
+Resolving media.discordapp.net (media.discordapp.net)... 162.159.129.232, 162.159.134.232, 162.159.133.232, ...
+Connecting to media.discordapp.net (media.discordapp.net)|162.159.129.232|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 54606 (53K) [image/png]
+Saving to: ‘logo.png?ex=6546c327’
+
+logo.png?ex=6546c327                                          0%[                                                                                                                                         ]       0  --.-KB/s               logo.png?ex=6546c327                                        100%[========================================================================================================================================>]  53.33K  --.-KB/s    in 0.01s   
+
+2023-10-22 08:28:49 (4.06 MB/s) - ‘logo.png?ex=6546c327’ saved [54606/54606]
+
