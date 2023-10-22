@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+    <title>IOT City Control Panel</title>
+    <link href="http://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+    <script src="http://vjs.zencdn.net/7.8.4/video.js"></script>
+</head>
+<body>
+    <section class="upperHalf">
+        <div class="leftContainer">
+            <div class="traffic-light">
+                <div class="light red" onclick="post('street', 'red')"></div>
+                <div class="light yellow"></div>
+                <div class="light green"></div>
+            </div>
+        </div>
+        <div class="rightContainer">
+            <div class="camTitle">
+                <h1>Live Camera</h1>
+            </div>
+            <div class="cam">
+		<video controls preload="auto" width="640" height="480">
+		    <iframe src="http://192.168.2.15:8888/cam" scrolling="no"></iframe>
+		</video>
+            </div>
+        </div>
+    </section>
+    <section class="lowerHalf">
+        <div class="lowerLeftContainer">
+            <button id="floodButton" onclick="executePythonScript()">
+                <span id="flood">FLOOD</span>
+	    </button>
+	    <script>
+		function executePythonScript(){
+		    fetch('/run-script')
+		    .then(response => response.json())
+		    .then(data => {
+			alert(data.message);
+		    })
+		    .catch(error => {
+			console.error("Error:", error);
+		    });
+		}
+	    </script>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+<script>
+  function post(elem, opt) {
+      console.log(elem, opt);
+      let form = document.createElement('form');
+      form.method = 'POST';
+      form.innerHTML = '<input visibility: hidden name=arguments[0] value=arguments[1]>';
+      document.body.append(form);
+      form.submit();
+      console.log(elem, opt);
+  }
+</script>
